@@ -1,0 +1,51 @@
+account:
+login ke fb-nya emc.social88@gmail.com
+u: emc.social88@gmail.com
+p: jltanjungdurenIIIe
+
+frequenci bigram
+https://www.kaggle.com/rtatman/tutorial-getting-n-grams
+import collections
+esBigramFreq = collections.Counter(bigrams)
+# what are the ten most popular ngrams in this Spanish corpus?
+esBigramFreq.most_common(10)
+
+or
+from collections import Counter
+bigrams = ngrams(token, 2)
+print (Counter(bigrams))
+
+
+# bigram function
+# link : https://stackoverflow.com/questions/32441605/generating-ngrams-unigrams-bigrams-etc-from-a-large-corpus-of-txt-files-and-t
+def bigrams(iterable):
+    a, b = tee(iterable)
+    next(b, None)
+    return izip(a, b)
+words = use_stopwords.strip().split()
+bi = bigrams(words)
+rawData.append(list(bi))
+
+
+# skipgram
+# Parameters:
+## sequence(sequence or iter) – the source data to be converted into trigrams
+# n(int) – the degree of the ngrams
+# k(int) – the skip distance
+# skip = skipgrams(token, n, k)
+
+
+
+query :
+CREATE TABLE keywords (id integer Not null, created_at datetime DEFAULT '0000-00-00 00:00:00' NOT NULL, caption text, like_count SMALLINT(6),
+comments_count SMALLINT(6), impressions SMALLINT(6), reach SMALLINT(6), saved SMALLINT(6), UNIQUE KEY ('id') );
+ganti id menjadi bigin(20)
+
+"on duplicate key update " \
+                                                                                  "created_at = values(created_at), " \
+                                                                                  "keywords = values(keywords)," \
+                                                                                  "like_count = values(like_count)," \
+                                                                                  "comments_count = values(comments_count)," \
+                                                                                  "reach = values(reach),"\
+                                                                                  "impressions = values(impressions),"\
+                                                                                  "saved = values(saved)"
