@@ -8,16 +8,16 @@ from pydrive.drive import GoogleDrive
 import pandas as pd
 import sys
 
-ID_for_facebook_API = "1d1_TTSgIGspF-g8g3dwjh6HkucoxBYparmO0GK370oA"
+ID_for_facebook_API = "ID_File"
 file_facebook_API = "source/facebook_api.csv"
 
 rawData_media_post = "results/rawData_media_sosial.xlsx"
-ID_rawData_media_post = "1HMVsJmSypBoS2KxHLPwvukMyxZuXmZQ7Kbso2uJhyyw"
+ID_rawData_media_post = "ID_File"
 
 rawData_ig_keywords = "results/rawData_ig_keywords.xlsx"
-ID_rawData_ig_keywords = "1sc-guvpqMheJjVxSBBY2uazvFZGYjhBXmve4ru5sFvs"
+ID_rawData_ig_keywords = "ID_File"
 rawData_ig_hashtag = "results/rawData_ig_hashtag.xlsx"
-ID_rawData_ig_hashtag = "1XTxSoGoMkUx52EVucEQDHujoOLY1QALfJ-BvFtPK8ac"
+ID_rawData_ig_hashtag = "ID_File"
 
 stopwords_ = "source/stopwords_ind.txt"
 
@@ -26,10 +26,10 @@ cred_emcanalyticsteam = {
     'pathTokenDrive': 'cred/token_drive_emcanalyticsteam.pickle'
 }
 
-host = "54.179.162.103"
-username = "rio"
-passw = "rio123!"
-db = "rio_toyotacommunity"
+host = "00.000.000.000"
+username = "username"
+passw = "password"
+db = "database_name"
 tableDailyAccount = 'account_daily'
 mediaPost = 'ig_media'
 keywordsPost = 'ig_keywords'
@@ -65,15 +65,15 @@ def connectDB(host, user, passw, dbNames, delquery, instquery):
 def get_acccess():
     creds = dict()
     # creds['access_token'] = 'EAAUFVYJujRsBACCdd3RtX1eiBwN2kMEUYRDJk8caiJHpGZAfBU2BcfgRbtPz8hhEzABQgpJSRgvNgaR3yGx01oEwAITqunvt9Ghy4yXn7qrDSz8g2ZBZCbPuB6ogDXUuuZBaUeqchCNniRZCTd2WE3uX79GZC3COuAPPwJhYc5IwZDZD'
-    creds['client_id'] = '1413239702195483'
-    creds['client_secret'] = '79407dfe22552cd96dea84b361a80d90'
+    creds['client_id'] = 'client_id'
+    creds['client_secret'] = 'client_secret'
     creds['graph_domain'] = 'https://graph.facebook.com/'
     creds['graph_version'] = 'v7.0'
     creds['endpoint_base'] = creds['graph_domain'] + creds['graph_version'] + '/'
     creds['debug'] = 'no'
-    creds['page_id'] = '630787357334122'
-    creds['instagram_account_id'] = "17841408407397253"
-    creds['ig_username'] = 'toyotafacts'
+    creds['page_id'] = 'ID_Page'
+    creds['instagram_account_id'] = "ID_Account_Business_Instagram"
+    creds['ig_username'] = 'username_instagram'
     return creds
 
 def makeApiCall( url, endpointParams, debug = 'no') :
